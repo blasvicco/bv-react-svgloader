@@ -4,7 +4,7 @@ This is a ReactJS Component for SVG file loading by Ajax and DOM injection. This
 
 ### Example:
 
-Please refer to the example/src/App.js file to see a running example.
+Please refer to the [example](example/src/App.js) file to see it working.
 
 To run the example:
 1. Clone the repository
@@ -17,7 +17,7 @@ npm start
 
 ### General Usage
 
-As you will be able to see in example/src/App.js in order to use the component we need to importe it as:
+As you will be able to see in [example](example/src/App.js) in order to use the component we need to importe it as:
 ```JAVASCRIPT
 import SvgLoader from 'svgloader';
 ```
