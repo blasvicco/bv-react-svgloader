@@ -19,7 +19,7 @@ npm start
 
 As you will be able to see in [example](example/src/App.js) in order to use the component we need to importe it as:
 ```JAVASCRIPT
-import SvgLoader from 'svgloader';
+import SvgLoader from 'react-svgloader';
 ```
 
 Then, in the render method we can just call it like:

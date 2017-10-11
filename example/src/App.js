@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SvgLoader from 'svgloader';
+import SvgLoader from 'react-svgloader';
 import './App.css';
 
 class App extends Component {
