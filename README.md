@@ -32,5 +32,5 @@ Then, in the render method we can just call it like:
 
 Install this component it easy, just use npm as:
 ```BASH
-npm install svgloader
+npm install react-svgloader
 ```
