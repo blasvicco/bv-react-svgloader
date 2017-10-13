@@ -1,6 +1,6 @@
 {
   "name": "react-svgloader",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "ReactJS Component for Ajax SVG file loading and DOM Injection.",
   "main": "svgloader.js",
   "directories": {
