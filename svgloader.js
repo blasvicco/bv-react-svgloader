@@ -22,7 +22,8 @@ module.exports = class SvgLoader extends React.Component {
               console.error(that.props.src + ' is not a valid svg file.');
               return false;
             }
-            let viewPort = xml.firstChild.getAttribute('viewBox').split(' ');
+            let viewPort = xml.firstChild.getAttribute('viewBox');
+            viewPort = viewPort ? viewPort.split(' ') : '';
             let width = xml.firstChild.getAttribute('width'); 
             let height = xml.firstChild.getAttribute('height');
             that.setState({
