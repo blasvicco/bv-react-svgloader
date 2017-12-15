@@ -6,7 +6,8 @@ module.exports = class SvgLoader extends React.Component {
         this.state = {
             'content': '',
             'width': 24,
-            'height': 24
+            'height': 24,
+            'viewBox' : '0 0 24 24'
         };
     }
     componentDidMount() {
@@ -22,14 +23,14 @@ module.exports = class SvgLoader extends React.Component {
               console.error(that.props.src + ' is not a valid svg file.');
               return false;
             }
-            let viewPort = xml.firstChild.getAttribute('viewBox');
-            viewPort = viewPort ? viewPort.split(' ') : '';
-            let width = xml.firstChild.getAttribute('width'); 
-            let height = xml.firstChild.getAttribute('height');
+            let viewBox = xml.firstChild.getAttribute('viewBox');
+            viewBox = viewBox ? viewBox.split(' ') : '';
+            let width = xml.firstChild.getAttribute('width') || viewBox[2] || 24;
+            let height = xml.firstChild.getAttribute('height') || viewBox[3] || 24;
+            viewBox = viewBox ? viewBox.join(' ') : ('0 0 ' + width + ' ' + height).replace(/px/g, '');
             that.setState({
                 'content': xml.firstChild.innerHTML,
-                'width': width || viewPort[2] || 24,
-                'height': height || viewPort[3] || 24
+                width, height, viewBox
             })
         })
         request.send();
@@ -39,7 +40,7 @@ module.exports = class SvgLoader extends React.Component {
             'svg',
             {
                 className: this.props.className,
-                viewBox: '0 0 ' + this.state.width + ' ' + this.state.height,
+                viewBox: this.state.viewBox,
                 width: this.state.width,
                 height: this.state.height,
                 dangerouslySetInnerHTML: {__html: this.state.content}
