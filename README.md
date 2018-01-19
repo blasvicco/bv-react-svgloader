@@ -1,4 +1,4 @@
-# svgloader
+# bv-react-svgloader
 
 This is a ReactJS Component for SVG file loading by Ajax and DOM injection. This component allow us to insert any SVG file specifying a path and adding a class name for css customization.
 
@@ -19,7 +19,7 @@ npm start
 
 As you will be able to see in [example](example/src/App.js) in order to use the component we need to importe it as:
 ```JAVASCRIPT
-import SvgLoader from 'react-svgloader';
+import SvgLoader from 'bv-react-svgloader';
 ```
 
 Then, in the render method we can just call it like:
@@ -32,5 +32,5 @@ Then, in the render method we can just call it like:
 
 Install this component is easy, just use npm as:
 ```BASH
-npm install react-svgloader
+npm install bv-react-svgloader
 ```
