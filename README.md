@@ -12,6 +12,11 @@ To run the example:
 ```BASH
 cd example
 npm install
+mkdir node_modules/bv-react-svgloader
+cd node_modules/bv-react-svgloader
+ln -s ../../../svgloader.js svgloader.js
+ln -s ../../../package.json package.json
+cd ../../
 npm start
 ```
 
