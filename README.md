@@ -11,13 +11,13 @@ To run the example:
 2. Execute in console:
 ```BASH
 cd example
-npm install
+yarn
 mkdir node_modules/bv-react-svgloader
 cd node_modules/bv-react-svgloader
 ln -s ../../../svgloader.js svgloader.js
 ln -s ../../../package.json package.json
 cd ../../
-npm start
+yarn start
 ```
 
 ### General Usage
@@ -38,4 +38,9 @@ Then, in the render method we can just call it like:
 Install this component is easy, just use npm as:
 ```BASH
 npm install bv-react-svgloader
+```
+
+Or using yarn:
+```BASH
+yarn add bv-react-svgloader
 ```
