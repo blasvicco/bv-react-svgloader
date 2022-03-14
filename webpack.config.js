@@ -14,8 +14,8 @@ module.exports = (env) => {
     output: {
       path: path.join(__dirname, 'build'),
       filename: 'js/svgloader.min.js',
-      libraryTarget: 'commonjs2',
-      libraryExport: 'default',
+      libraryTarget: 'umd',
+      libraryExport: 'SvgLoader',
     },
     plugins: [
       new ESLintPlugin({
@@ -25,5 +25,6 @@ module.exports = (env) => {
         overrideConfigFile: './.eslintrc.json'
       }),
     ],
+    target: 'web'
   };
 };
