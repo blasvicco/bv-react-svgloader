@@ -14,8 +14,10 @@ module.exports = (env) => {
     output: {
       path: path.join(__dirname, 'build'),
       filename: 'js/svgloader.min.js',
-      libraryTarget: 'umd',
-      libraryExport: 'default',
+      library: {
+        name: 'SvgLoader',
+        type: 'umd',
+      },
     },
     plugins: [
       new ESLintPlugin({
