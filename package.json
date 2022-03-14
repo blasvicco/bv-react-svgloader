@@ -1,6 +1,6 @@
 {
   "name": "bv-react-svgloader",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "ReactJS Component for Ajax SVG file loading and DOM Injection.",
   "main": "svgloader.js",
   "directories": {
