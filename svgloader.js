@@ -1,6 +1,6 @@
-let React = require('react');
+import React, { Component } from 'react';
 
-module.exports = class SvgLoader extends React.Component {
+export default class SvgLoader extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ module.exports = class SvgLoader extends React.Component {
   }
 
   componentDidMount() {
-    this._load()
+    this._load();
   }
 
   componentDidUpdate(prevProps) {
@@ -59,4 +59,4 @@ module.exports = class SvgLoader extends React.Component {
     });
     request.send();
   }
-};
+}

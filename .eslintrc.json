@@ -6,22 +6,14 @@
   },
   "extends": [
     "eslint:recommended",
-    "react-app"
+    "plugin:react/recommended"
   ],
-  "parserOptions": {
-    "ecmaVersion": 10,
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
-  "settings": {
-    "react": {
-      "version": "16.5.2"
-    }
-  },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "plugins": ["react-hooks"],
   "rules": {
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/display-name": "off",
     "camelcase": ["error", { "properties": "never", "ignoreDestructuring": true }],
     "eqeqeq": ["error", "smart"],
     "indent": [
@@ -47,5 +39,10 @@
       "error",
       { "functions": "always", "keywords": "always", "classes": "always" }
     ]
+  },
+  "settings": {
+    "react": {
+      "version": "16.13.1"
+    }
   }
 }
